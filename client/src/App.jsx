@@ -1,9 +1,19 @@
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Home from './pages/Home'
+import Team from './pages/Team'
+import User from './pages/User'
 
-function App() {
+
+export default function App() {
 
   return (
-    <h1 className="text-center m-5 text-green-500 font-bold text-5xl">Allahu-Akbar</h1>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Team />} />
+        <Route path='/' element={<User />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
-export default App
